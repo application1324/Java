@@ -1,0 +1,15 @@
+package ch01;
+
+public class _06_Constants {
+	public static void main(String[] args) {
+		final String KB_COUNTRY_CODE = "+82";
+//		KB_COUNTRY_CODE = "+8282"; 상수는 절때 바꿀수없다.
+//		상수는 뛰어쓰기 대신에 _을 쓴다.
+//		상수는 모든 문자을 대문자로 쓴다.
+		System.out.println(KB_COUNTRY_CODE);
+	
+		final double PI = 3.141592;
+		final String DATE_OF_BIRTH = "2021-04-06";
+	
+	}
+}
