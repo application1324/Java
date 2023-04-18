@@ -1,0 +1,47 @@
+package ch1;
+
+public class _01_string1 {
+	public static void main(String[] args) {
+		String s = "I like Java and Python and C";
+		System.out.println(s);
+
+		
+//		문자열의 길이 - length
+//		(변수.매서드) 매서드는 변수에지정할 효과을 말한다.
+		System.out.println(s.length()); 
+		
+//		대소문자 변환 - upper()(대), lower()(소)
+		System.out.println(s.toUpperCase());
+		System.out.println(s.toLowerCase());
+		
+//		 포함관계
+		System.out.println(s.contains("Java"));
+//		true
+		System.out.println(s.contains("C#"));
+//		false
+		System.out.println(s.indexOf("Java"));
+//		7 지정한 문자가 시작하는 주소 출력
+		System.out.println("C#");
+//		-1 지정한 문자을 찾을수 없다면 출력
+		System.out.println(s.indexOf("and")); //처음 일치하는 정보
+		System.out.println(s.lastIndexOf("and"));//마지막에 일치하는 정보
+		System.out.println(s.startsWith("I like"));//처음에서 일치한다면 true 아니면 false
+		System.out.println(s.endsWith("C."));//마지막에서 일치한다면 true 아니면 false
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	}
+}
