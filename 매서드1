@@ -1,0 +1,43 @@
+package ch1;
+
+public class _02_String2 {
+	public static void main(String[] args) {
+		String s = "I like Java and Python and C.";
+				
+				
+//				문자열 변환
+//		함수 안에 함수을 넣을수 있다.
+		System.out.println(s.replace("and", ",")); //바꾸기로 지정한 문자을 바꿀 문자로 바꿀수있다. 
+		System.out.println(s.substring(7)); //인덱스 기준 7(걸친 부분을 없어지게 함)부터 시작(이전 내용은 삭제)
+		System.out.println(s.substring(7, 11)); //인덱스 기준 7번(걸린 부분을 없어지게 함) 부터 10(걸린 문자을 출력)번까지 지운 문자열 출력
+		System.out.println(s.substring(s.indexOf("Java"))); //7 저정한 Java 바로 앞주소가 7이다.
+		System.out.println(s.substring(s.indexOf("Java"), s.lastIndexOf("and C")));
+		
+				
+//		공백제거
+		s = "                            Hello Java                       ";
+		System.out.println(s);
+		System.out.println(s.trim());
+		
+//		문자열 결합
+		String s1 = "Java";
+		String s2 = "Python";
+		System.out.println(s1 + s2);
+		System.out.println(s1 + ", " + s2);
+		System.out.println(s1.concat(", ").concat(s2)); //1,지정한 수 출력 2.가로안 문자 출력 3. .concat()안 문자출력
+				
+		
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+	}
+}
