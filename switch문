@@ -1,0 +1,75 @@
+package chap_04;
+
+public class _04_switchCase {
+	public static void main(String[] args) {
+//		Switch Case
+//		1등은 전액 장학금
+//		2등은 반액 장학금
+//		3등은 반액 장학금
+//		그 외 전액 장학금 대상이 아님
+		
+//		if문으로 만들어 보기
+		int Lanking = 3;
+		
+		if(Lanking == 1) {
+			System.out.println("전액 장학금");
+		}
+		
+		else if(Lanking == 2 || Lanking == 3) {
+			System.out.println("반액 장학금");
+		}
+		
+		else {
+			System.out.println("전액 장학금 대상아님");
+		}
+		
+//		케이스가 명확한 경우에는 switch문으 사용하는 것을 교려하볼만 하다!
+//		case문은 자력으로 탈출할수없기 때문에 break문을 쓴다.
+		switch (Lanking) {
+			case 1:
+				System.out.println("전액 장학금");
+				break;
+			case 2:
+				System.out.println("반액 장학금");
+				break;
+			case 3:
+				System.out.println("반액 장학금");
+				break;
+			default:
+				System.out.println("장학금 대상 아님");
+		}
+		
+//		중고상품을 등급에 따라 가격을 책정(1급: 최상,4급: 최하)
+//		등급별 천원씩 차등이 있음
+		
+		int grade = 1;
+		int price = 7000; //기본가격 -> 최하기준
+		
+//		break문을 쓰지 않는다면 맞는 값이 나오는 부분까지 다 한번씩 실행한다.
+	switch (grade) {
+	case 1: 
+		price += 1000;
+	case 2:
+		price += 1000;
+	case 3:
+		price += 1000;
+	}
+	System.out.println(grade + "등급의 제품 가격: " + price);
+
+			
+		
+		
+		
+		
+
+		
+		
+		
+		
+		
+		
+		
+		
+
+	}
+}
