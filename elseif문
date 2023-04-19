@@ -1,0 +1,99 @@
+package chap_04;
+
+// if(조건1){
+//	조건1이 true일 떄 출력
+//}
+//	else if(조건2) {
+//		조건1이 false이고 조건2일 true일 떄 출력
+//	}
+//	
+//	else if(조건3) {
+//		조건2가 false이고 조건3이 true일 때 출력
+//	}
+//	else {
+//		모두가 false일떄 출력
+//	}
+		
+	
+public class _03_ElseIf {
+	public static void main(String[] args) {
+		
+		boolean cafelatte = true;
+		boolean cafeemocha = true;
+		
+//		처음에 있는 조건문이 true이라면 처음만 출력하고 나머지는 출력하지 않음
+//		그러게 때문에 효율적이다.
+		
+//		카페라떼 가 없다면 카페모카 카페모카가 없다면 아메리카노 주문
+		if(cafelatte) {
+			System.out.println("카페라떼 주문!");
+		}
+		else if (cafeemocha) {
+			System.out.println("카페모카 주문!");
+		}
+		else {
+			System.out.println("아메리카노 주문!");
+		}
+		
+		
+		
+//		이런한 문장을 다문장을 다 실행해 보고 실행하기 때문에 비효율적이다.
+		if(cafelatte) {
+			System.out.println("카페라떼 주문!");
+		}
+		if (cafeemocha) {
+			System.out.println("카페모카 주문!");
+		}
+		
+//		음료 하나 추가!
+		cafelatte = false;
+		cafeemocha = false;
+		boolean tear = true;
+		
+		
+//		else if문은 무한정 추가 할수 있다.
+		if(cafelatte) {
+			System.out.println("카페라떼 주문!");
+		}
+		else if (cafeemocha) {
+			System.out.println("카페모카 주문!");
+		}
+		else if (tear) {
+			System.out.println("차 주문!");
+		}
+		else {
+			System.out.println("아메리카노 주문!");
+		}
+		System.out.println("커피 주문 완료 #3");
+		
+//		else문은 상황에 따라 없을수도 있다.
+//		if문이 기본이되는 조건문이다.
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	}
+}
