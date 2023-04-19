@@ -1,0 +1,45 @@
+package chap_04;
+
+public class _01_if {
+	public static void main(String[] args) {
+//		조건문 if
+		int hour = 15;
+		
+//		성일까페어서 오후2시 이전에는 아메라카노를 1+1
+		if(hour > 14) 
+			System.out.println("아메리카노 1+1");
+//		if문 안에 한문장은 대괄호을 않해도 된다.
+		
+//		if(조건식) {
+//			실행할 코드
+//		}
+		
+//		if문 내에서 하나의 문자을 실행할 떄는 {} 생략 가능
+		if(hour > 14) System.out.println("아메리카는 1+1");
+		
+		if(hour < 10) {
+			System.out.println("아메리카노 1+1");
+			System.out.println("샷추가!!");
+		}
+		
+		if(hour < 10)System.out.println("아메리카노 1+1");
+		if(hour < 10)System.out.println("샷추가!!");
+		
+//		오후 2시 이전, 모닝커피을 마시지 않은 경우?
+		hour = 10;
+		boolean morningCoffee = false;
+		if(hour < 14 && morningCoffee == false) {
+//		if(hour < 14 && !morningCoffee) 위의 문장과 같은 역할을 함	
+			System.out.println("아메리카노 1+1");
+		}
+		
+		if(hour >= 14 || morningCoffee) {
+//		if(hour >= 14 || morningCoffee == true) 위의 문자과 같은 역할을 함	
+		System.out.println("아메리카노 500원 할인");
+		}
+		
+		
+				
+		
+	}
+}
