@@ -1,0 +1,13 @@
+	for(int i=0; i<5; i++) {
+//			0부터 지정한수-1까지 실행
+//			빈칸 찍기
+			for(int j=0; j<4-i; j++) {
+				System.out.print(" ");
+			}
+//			별 찍기
+			for(int j=0; j<1+i; j++) { 
+				//j<5는 지정한 수만큼 실행	
+				System.out.print("*");
+			}
+			System.out.println();
+		}
