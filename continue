@@ -1,0 +1,27 @@
+package chap_04;
+
+public class _11_Continue {
+	public static void main(String[] args) {
+//		Continue
+//		치킨 주문 손님중에 노쇼 손님이 있다고 가장
+		int max = 20; //최대 치킨 판매 수량 
+		int sold = 0; //판매한 수
+		int noShow = 17; //노쇼한 수
+		for(int i=1; i<=50; i++) {
+			System.out.println(i+"번 손님, 주문하신 치킨 나왔습니다.");
+			
+			if(i==noShow) {
+				System.out.println(i + "번 손님, 자리에 계시지 않아 다음 손님에게 넘어갑니다.");
+				continue;
+//				continue가 실행된다면 멈추지 않고 아래 코드로 넘어간다.
+			}
+			sold++; //위 아래의 명령어가 실행되지 않았기 때문에 sold의 수가 
+//			가 늘어남
+			if(sold == max) {
+				System.out.println("금일 재료가 모두 소진되었습니다.");
+				break;
+//				break는 위에 있는 반복문을 멈춘다.
+			}
+		}
+	}
+}
