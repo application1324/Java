@@ -1,0 +1,16 @@
+package chap_04;
+
+public class _13_NameLoop {
+	public static void main(String[] args) {
+		
+		Loop1:
+		for(int i=2; i<=9; i++) {
+			for(int j=1; j<=9; j++) {
+//				if(j==5) continue; 그부분만 실행하지 않음
+//				if(j==5) break;  그부분에 아래까지 실행하지 않음
+				if(j==5) break Loop1; // 이름으로 지정한 곳을 다 멈춤
+				 System.out.println(i+"*"+j+"="+(i*j));
+			}
+		}
+	}
+}
