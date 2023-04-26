@@ -1,0 +1,42 @@
+package chap_04;
+
+import java.util.Scanner;
+
+public class _12_BreakContinue {
+	public static void main(String[] args) {
+		
+		int menu = 0;
+		int num = 0;
+		
+		Scanner sc = new Scanner(System.in); //new는 새로운 Scanner을 만든것이다.
+//		그 이유는 Scanner는 라이브러리 도서관 같은것에서 꺼내온것이기 때문에 복제해 사용해야 한다.
+		while (true) {
+			System.out.println("(1) square");
+			System.out.println("(2) square root");
+			System.out.println("(3) log");
+			System.out.println("원한는 메뉴(1~3)를 선택하세요. (종료:0)");
+			
+			String tmp = sc.nextLine();
+			menu = Integer.parseInt(tmp); 
+//			참조형 변수타입은 기본 변수타입가는 형변환 할수없기 때문에 
+//			Integer.parseInt(지정변수);을 사용해야 한다.
+			
+			if(menu == 0) {
+				break; //위 반복문 멈추기
+			}
+			
+			else if(!(1<=menu && menu <=3)){ //1~3의 수을 입력하지 않았을때 실행됨
+				System.out.println("메뉴를 잘못 선택하였습니다. (종료는 0)");
+				continue; //위 반복문을 처음 부터 다시 실행
+				
+			}
+			
+			System.out.println("선택하신 메뉴는 "+menu+"번 입니다.");
+			
+			
+		}
+		
+		sc.close();
+//		네트웨트 전송을 할때 해킹을 당할수있다. or Scanner 전구을 없어지게 할수있다.
+	}
+}
