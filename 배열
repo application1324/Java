@@ -1,0 +1,115 @@
+package chap5;
+
+
+public class _01_Array {
+	public static void main(String[] args) {
+//		배열: 같은 자료형의 여러개의 값을 저장하는연속된 공간
+//			자료를 순차적으로 관리하는 구조
+//		int에 많은 변수을 집어넣으면 공간을 막들어감
+
+	//Array에 많은 변수을 접어넣으면 처음에는 막들어가지만 다음에는 순차적으로 들어간다.
+		//똑같은 속성을 가진 변수을 담음
+		//이것을 사용한다면 관리하기가 변수보다 좋음
+//		배열을 1의 위치을 알면 다음 위치를 알수있기 때문에 배열을 사용함
+		
+//		학생 100명의 ID를 부여할려고 함.
+		int stuId01 = 11101;
+		int stuId02 = 11102;
+		int stuId03 = 11103;
+		
+		int stuId024 = 11124;
+//		비율적이다. 값을 관리하기 힘들다 정보가 한곳에 있지 않아서
+//		값을 저장할 변수을 너무 많이 지정해야한다.
+		
+		int stuId[] = new int[100];
+		
+		stuId[0] = 111101;
+		stuId[1] = 111102;
+//		~
+		stuId[99] = 111199;
+//		int을 쓰지 않는다라는 장점이 없지만 반복문을 쓴다면 편하다.
+		
+		String coffeeRoss = "아메리카노";
+		String coffeeRachel = "카페모카";
+		String coffeeChandler = "라떼";
+		String coffeeMinica = "카푸치노";
+		
+//		System.out.println(coffeeRoss+"하나");
+//		System.out.println(coffeeRachel+"하나");
+//		System.out.println(coffeeMinica+"하나");
+//		System.out.println(coffeeChandler+"하나");
+//		System.out.println("주세요");
+		
+//		데이터타입[] 변수이름 = new 데이터타입[배열 크기];
+//		데이터타입 변수이름[] = new 데이터타입[배열 크기];
+//		배열의 크기는 무조건 지정해야한다.
+//		배열의 특징은 index을 가진다는것이다.
+//		0부터 시작한다.
+//		index의 주소의 끝은 지정한 배열의 크기-1이다.
+		String[] coffees = new String[4];
+		
+		coffees[0] = "아메리카노";
+		coffees[1] = "카페모카";
+		coffees[2] = "라떼";
+		coffees[3] = "카푸치노";
+//		집과 비교하자면 index는 주소 들어있는 변수는 살고있는사람이다.
+//		실제 주소와 다르게 0부터 시작하다는것이 단점이다.
+		
+//		배열 선언 및 할당
+		String[] coffees1 = new String[]{"아메리카노","카페모카","라떼","카푸치노"};
+		
+//		배열 선언 밎 할당1
+//		new String[]을 쓰지 않아도 된다.
+		String[] coffees2 = {"아메리카노","카페모카","라떼","카푸치노"};
+		
+		System.out.println(coffees[0]);
+		System.out.println(coffees[1]);
+//		다른 메뉴로 변경
+		coffees[2] = "아메리카노";
+		System.out.println(coffees[2]);
+		System.out.println(coffees[3]);
+		System.out.println("주세요");
+		
+//		배열 선언 및 할당시 주의점!
+//		데이터타입과 이름나 선언은 가능함
+//		단, 타입과 이름만으로 선언한 경우 값으 할당할때, new String[]을 생략할수없다.
+		String[] coffees6;
+//		coffees6 = {"아메리카노","카페모카","라떼","카푸치노"}; 버그 생김
+		coffees6 = new String[] {"아메리카노","카페모카","라떼","카푸치노"};
+		
+		int[] i = new int[3];
+		i[0] = 1;
+		i[1] = 2;
+		i[2] = 3;
+		
+//		다른 데이터 타입도 가능
+		double[] d = new double[] {10.0,12.3,3.4,24.3};
+		boolean[] b = {true,false,true}; //new 데이터타입[] 생략 가능 
+//		new는 처음 부터 있는것을 그대로 쓸수없기 때문에 복제해서 사용한다.
+//		단점
+//		추가 제거을 할때 새로운 배열을 만들어야한다.
+		
+		}
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	}
+
