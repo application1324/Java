@@ -1,0 +1,27 @@
+package test;
+
+import java.util.Scanner;
+
+public class Ex03 {
+	public static void main(String[] args) {
+//		값을 하나입력 받고,
+//		1부터 1씩 증가하면서 누적합을 구하다가 입력받은 값 보다 커지는 순간 반복을 중단하고,
+//		그 때 마지막으로 더해진 값과 종합을 출력하시오.
+		
+		Scanner sc  = new Scanner(System.in);
+		
+		System.out.println("원하는 수 입력");
+			int num = sc.nextInt();
+			int sum = 0;
+			int cout = 0;
+		while (true) {
+			if(sum > num) {
+				break;
+			}
+			sum += cout + 1;
+			cout += 1;
+		}
+		
+		System.out.printf("더한 수: %d 총합: %d ", cout, sum);
+	}
+}
