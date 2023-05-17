@@ -1,0 +1,28 @@
+package test;
+
+import java.util.Scanner;
+
+public class Ex02 {
+	public static void main(String[] args) {
+//		입력반든 정수만큼(랜덤하게 정함) 성적을 입력받아서 충점과 평균으로 출력하시오.
+		
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.println("학생수을 입력해주세요");
+		int co = sc.nextInt();
+		
+		int sum = 0;
+		
+		for(int i=1; i<=co; i++) {
+			System.out.println(i+"번째의 학생의 성적을 입력해주세요");
+			int score = sc.nextInt();
+			sum += score;
+		}
+		
+		System.out.printf("총 %d명의 학생의 총점은 %d점 이고, 평균은 %.1f", co, sum, (double)co/sum);
+		
+//		컴퓨터는 주어진 값을 점차적으로 더한다.(실시간 처리을 한다)
+		
+		
+	}
+}
