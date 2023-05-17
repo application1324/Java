@@ -1,0 +1,24 @@
+package test;
+
+import java.util.Scanner;
+
+public class Ex01 {
+	public static void main(String[] args) {
+//		1에서 9까지의 숫자중에 입력받아 그 번호에 핻당하는 구구단을 출력하시요
+		
+		Scanner sc = new Scanner(System.in);
+//		뒤에 있는 것은 생성자라는 것이다(나중에 배운다)
+		
+		System.out.println("1~9중 선택하시오");
+		int nu = sc.nextInt();
+		
+		for(int i=1;i<=9; i++) {
+			if(nu == i) {
+				for(int j=1; j<=9; j++) {
+					System.out.println(nu + " * "+j+ " = "+ (nu*j));
+		}
+		
+			}
+		}
+	}
+}
