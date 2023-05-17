@@ -1,0 +1,25 @@
+package test;
+
+import java.util.Scanner;
+
+public class Ex04 {
+	public static void main(String[] args) {
+//		어떤 정수 n을 입력받고
+//		1부터 홀수를 차레대로 더해 나가면서 합이 n보다 크면 그 때까지 더한 홀수의 개수의 그 합을 출력하시오
+		
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.println("원하는 정수을 입력하시오");
+		int num = sc.nextInt();
+		int sum = 0;
+		int i;
+		
+		for(i=1; ;i+=2) {
+			if(sum > num) {
+				break;
+			}
+			sum +=i;
+		}
+		System.out.printf("더한 홀수의수는 %d개이고 그 합은 %d이다",i/2,sum);
+	}
+}
