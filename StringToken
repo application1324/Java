@@ -1,0 +1,18 @@
+import java.io.*;
+import java.util.StringTokenizer;
+
+public class Main {
+    public static void main(String[] args)throws IOException  {
+    	BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+    	
+    	StringTokenizer st = new StringTokenizer(br.readLine()," ");
+//    	받은 문장을 뒤의 조건에 따라 단어로 나눔
+    	System.out.print(st.countTokens());
+//    	.countTokens()는 나눈 단어의 수을 출력한다.
+//    	.nextTokens()는 나눈 단어을 출력한다.
+//    	.nextTOkens()는 .hasMoreTokens()와 같이 쓴다.
+//    	.hasMoreTokens()는 출력할 토큰이 있다면 true 없다면 false를 출력한다.
+    	
+    
+    }
+}
