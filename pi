@@ -1,0 +1,24 @@
+package chap_04;
+
+import java.util.Scanner;
+
+public class Ex09 {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+
+		double pi = 0;
+		double num = 1;
+		double num1 = 1;
+//		int형이 된다면 자동형변한이 되기 때문에 double로 해주어야 한다.
+		
+		int cnt = sc.nextInt();
+		
+		for(int i=0; i<cnt; i++) {
+			pi += (4/num1)*num;
+			num1+=2;
+			num*=-1;
+		}
+		
+		System.out.println(pi);
+	}
+}
