@@ -1,0 +1,24 @@
+package chap_04;
+
+import java.util.Scanner;
+
+public class Ex06 {
+	public static void main(String[] args) {
+	
+//			팩토리얼 계산기
+//			5! = 5*4*3*2*1
+//			어떤 수 num를 입력받으면 그 수의 팩토리얼을 출력
+		
+		Scanner sc = new Scanner(System.in);
+		int num = sc.nextInt();
+		
+		int num1 = 1; // 누적곱을 구할때는 1이 기본값이다.
+//		int sum = 0; // 누적합을 구할때는 0이 기본값이다.
+		for(int i=num; i>1; i--) {
+			num1 *= i;
+		}
+//		1을 곱하나 마나 이기때문에 1을 곱하지 않는다.
+		
+		System.out.println(num1);
+	}
+}
