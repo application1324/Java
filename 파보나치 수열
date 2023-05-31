@@ -1,0 +1,29 @@
+package test;
+
+import java.util.Scanner;
+
+public class Ex10 {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		int num = sc.nextInt();
+		
+		int prePrevNum = 1;
+		int prevNum = 1;
+		int sum = prePrevNum + prevNum;
+		
+		System.out.print(prePrevNum + " ");
+		System.out.print(prevNum + " ");
+		
+		for(int i = 3; i <= num; i++) {
+			int curNum = prePrevNum + prevNum;
+			sum += curNum;
+			System.out.print(curNum + " ");
+			
+			prePrevNum = prevNum;
+			prevNum = curNum;
+		}
+		System.out.println();
+		System.out.println(sum);
+	}
+}
+
