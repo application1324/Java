@@ -1,0 +1,24 @@
+package test;
+
+import java.util.Scanner;
+
+public class Ex02 {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		
+		int in = sc.nextInt();
+		boolean isPrime = true;
+
+		for(int i=2; i<=in/2; i++) { 
+			// in을 2로 나누는 이유는 수을 구할때는 처음 끝수로 나누어 떨어져서
+			// 끝수 까지는 나머지을 구하지 않아도 처음수로 나누면 나머지가 구해지기
+			// 때문에 반으로 나누어도 나머지을 구할수 있다.			
+				if(in % i == 0) {
+					isPrime = false;
+					break;
+			}
+		}
+		System.out.println(isPrime ? "소수" : "소수X");
+		sc.close();
+	}
+}
