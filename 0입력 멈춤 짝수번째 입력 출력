@@ -1,0 +1,24 @@
+package test;
+
+import java.util.Scanner;
+
+public class Ex03 {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		int cnt = 0;
+		
+		int[] nums = new int[100];
+		for(int i=0; i<nums.length; i++) {
+			nums[i] = sc.nextInt();
+			cnt++;
+			if(nums[i] == 0) {
+				break;
+			}
+		}
+		for(int i=1; i<cnt; i+=2) {
+			//짝수번째로 입력된것는 1부터이기 때문에 나머지가 0이 아니어야한다.
+			System.out.print(nums[i] + " ");
+		}
+		sc.close();
+	}
+}
