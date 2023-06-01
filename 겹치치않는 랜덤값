@@ -1,0 +1,19 @@
+package test;
+
+public class Ex01 {
+	public static void main(String[] args) {
+//		1부터 10까지의 정수 중에서 랜덤으로 뽑기
+		int range = 10;
+		int start = 1;
+		int a=0, b=0, c=0;
+		
+//		범위는 0.0부터 0.99999999까지이다.
+		while (a == b || a == c || b == c) { // a b c가 같을때는 반복
+			a = (int) ((range + start) * Math.random());
+			b = (int) ((range + start) * Math.random());
+			c = (int) ((range + start) * Math.random());
+			
+			}
+			System.out.printf("%d, %d, %d", a, b, c);
+	}
+}
