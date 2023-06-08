@@ -1,0 +1,36 @@
+package chap_06;
+
+public class _03_Return {
+
+//	void대신에 다른 데이터 타입이 들어간다면 그 데이터 타입만 들어가야 한다. 
+	public static String getPhoneNumber() {
+		String phoneNumber = "02-1234-4567";
+		
+		return phoneNumber;
+	}
+	
+	public static String getAddress() {
+		return "서울시 강남구";
+	}
+	
+	public static String getActivity() {
+		return "볼링장, 탁구장, 노래방, 사우나";
+	}
+	
+	public static void main(String[] args) {
+		String phoneNumber = getPhoneNumber();
+		
+		String address = getAddress();
+		
+		
+		System.out.println(phoneNumber);
+		
+		System.out.println(address);
+
+//		아래와 같은 방법으로도 출력이 가능함
+		
+//		(변수을 선언하면 이정한 메모리 크기을 가지고 있기 때문에 
+//		메모리 크기을 신경을 써야 하는 경우 아래와 같이 출력하기도 함)
+		System.out.println(getActivity());
+	}
+}
