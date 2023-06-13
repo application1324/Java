@@ -1,0 +1,40 @@
+package chap_05;
+
+public class _07_VariableScope {
+
+	public static void methodA(int number) {
+		
+		System.out.println(number);
+	}
+	
+	public static void methodB() {
+		int result = 1;
+	}
+//	지역은 {}사이을 말한다.
+	
+	public static void main(String[] args) {
+		
+		int number = 3;
+//		메인 매서드에서 선언한 변수는 다른 매서드에서 출력할수 없다.
+
+//		System.out.println(methodB(result));
+//		result는 지역변수이게 때문에 출력되기 않는다.	
+		
+		for( int i = 0; i < 5; i++) {
+			System.out.println(i);
+//			i도 지역변수이기 때문에 외부에서 출력할수 없다.
+		}
+		
+//		System.out.println(i);
+		
+		{
+			int j = 0;
+			System.out.println(j);
+//			지역는 {} 사이을 말한다.
+		}
+		
+//		System.out.println(j);
+		
+
+	}
+}
