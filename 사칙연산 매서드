@@ -1,0 +1,60 @@
+package chap_05;
+
+import java.util.Scanner;
+
+public class Prog_Calculator {
+
+	public static int plus(int num, int num1) {
+		int result = num + num1;
+		return result;
+	}
+	
+	public static int minus(int num, int num1) {
+		int result = num - num1;
+		return result;
+	}
+	
+	public static int mul(int num, int num1) {
+		int result = num * num1;
+		return result;
+	}
+	
+	public static double divide(int num, int num1) {
+		if( num1 == 0 ) {
+			System.out.println("분모에 0이 올수 없습니다.");
+		}
+		
+		double result = (double)num / num1;
+		return result;
+	}
+
+	
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.println("첫번째 수");
+		int num = sc.nextInt();
+		
+		System.out.println("두번쨰 수");
+		int num1 = sc.nextInt();
+		
+		System.out.println("연산자 종류(+,-,*,/) : ");
+		String oper = sc.next();
+		
+		switch (oper) {
+		case "+": 
+			System.out.println(plus(num, num1));
+			break;
+		case "-":
+			System.out.println(minus(num, num1));
+			break;
+		case "*":
+			System.out.println(mul(num, num1));
+			break;
+		case "/":
+			System.out.println(divide(num, num1));
+			break;
+			
+		}
+	}
+}
