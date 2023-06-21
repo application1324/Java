@@ -1,0 +1,40 @@
+package chap_07;
+
+//	인스턴스 변수
+//	인스턴스란 클래스의 객체
+public class _02_InstanceVariables {
+
+	public static void main(String[] args) {
+//		첫 제품
+		
+//		설계도 복사
+		BlackBox b1 = new BlackBox();
+		b1.modeIName = "까망이";
+		b1.resoIutine = "FHD";
+		b1.price = 20000;
+		b1.color = "Black";
+		
+		System.out.println(b1.modeIName);
+		System.out.println(b1.resoIutine);
+		System.out.println(b1.price);
+		System.out.println(b1.color);
+		
+//		두번째 제품
+		BlackBox b2 = new BlackBox();
+		b2.modeIName = "하양이";
+		b2.resoIutine = "UHD";
+		b2.price = 50000;
+		b2.color = "white";
+		
+		System.out.println();
+		System.out.println(b2.modeIName);
+		System.out.println(b2.resoIutine);
+		System.out.println(b2.price);
+		System.out.println(b2.color);
+		
+//		같은 클래스을 공유하지만 객체(인스턴스)가 다르기 때문에 참조가 불가함
+//		객체가 만들어질때 다른 공간을 만들기 때문에(실질적으로 분리됨)
+		
+//		인스턴스 변수는 만들어진 객체에서만 사용된다.
+	}
+}
