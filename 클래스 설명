@@ -1,0 +1,44 @@
+package chap_07;
+
+public class _01_Class {
+	
+	public static void main(String[] args) {
+//		C언어 - 인기있는 언어!! 대표적인 절차형 언어!!
+//		Java, C++, C# - 객체지향 언어!! 
+//		상용작용을 할수 있는 무,생물
+//		장점
+//		유지 보수성, 높은 재사용성
+		
+//		차량용 블랙박스
+//		모델명, 해상도, 가격, 색상
+		
+//		첫 번째 제품
+		String modeIName = "까망이";
+		String resilution = "FHD";
+		int price = 20000;
+		String color = "블랙";
+		
+//		두 번째 제품
+		String modeIName1 = "하양이";
+		String resilution1 = "UHD";
+		int price1 = 50000;
+		String color1 = "화이트";
+		
+//		새로운 제품을 만들다면?
+		
+//		클래스는 설계도 이기 때문에 복사을 해서 써야 한다.
+		
+//		클래스 불러오기	
+		BlackBox bbox = new BlackBox();
+//		객체는 인스턴스이고 객체을 만들어내는것을 인스턴스화 라고 한다.
+//		BlackBox의 객체을 만들어냄
+//		뒤의 부분는 나중에 배울것이다
+		
+//		클래스는 하나만 존재
+//		인스턴스는 복제해 사용해야 하며 여러개 사용가능
+
+		BlackBox bbox1 = new BlackBox();
+
+
+	}
+}
