@@ -1,0 +1,33 @@
+package chap_07;
+
+public class BlackBox {
+	
+//	클래스의 구성 요소 - 필드
+//	변수 처럼 만들어 논것을 필드라고 한다
+	String modeIName;
+	String resoIutine;
+	int price;
+	String color;
+	
+//	boolean canAutoReport; //자동신고기능
+//	모든 객체에 공통적으로 필요한 변수는 클래스로 변수로 생성한다.
+	
+	static boolean canAutoReport = false;
+//	이런한 식으로 변수을 선언한것을 클래스 변수라 하며 모든 객체에 적용된다. 
+	
+//	자동 충돌 감시 시스템
+	void autoReprt() {
+		if(canAutoReport) {
+			System.out.println("충돌 감지 기능이 활성화 되었습니다.");
+		}else {
+			System.out.println("충돌 감지 기능이 화설화 되지 않았습니다.");
+		}
+		
+	}
+	
+//	카드 삽입
+	void insertMenoryCard(int capacity){
+		System.out.println("메모리 카드가 삽입되었습니다.");
+		System.out.println("용량은 " + capacity + " GB입니다.");
+	}
+}
