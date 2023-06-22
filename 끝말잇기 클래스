@@ -1,0 +1,30 @@
+package games.word;
+
+import java.util.Scanner;
+
+public class Player {
+	Scanner sc = new Scanner(System.in);
+	
+	public String name;
+	public String word;
+	
+	
+	public String writeWord() {
+		word = sc.nextLine();
+		return word;
+	}
+	
+	public boolean chkSuccess(char lastChar) {
+		
+		if ( lastChar == word.charAt(0)) {
+			return true;
+			
+		}else {
+			return false;
+			
+		}
+		
+		
+		
+	}
+}
