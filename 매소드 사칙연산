@@ -1,0 +1,60 @@
+package test2;
+
+import java.util.Scanner;
+
+public class Ex10 {
+	
+//	계산기(매소드)
+//	두 개의 정수를 입력 받음
+//	사칙연산을 선택함
+//	
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		
+		String str = sc.nextLine();
+		
+		int num = sc.nextInt();
+		int num1 = sc.nextInt();
+		
+		double result = 0;
+		
+		switch (str) {
+		case "+": {
+			result = add(num, num1);
+			break;
+		}
+		case "-": {
+			result = minus(num, num1);
+			break;
+		}
+		case "*": {
+			result = multi(num, num1);
+			break;
+		}
+		case "/": {
+			result = div(num, num1);
+			break;
+		}
+		default:
+			System.out.println("잘못입력되었습니다.");
+		}
+		
+		sc.close();
+	}
+	
+	public static int add(int num, int num1) {
+		return num + num1;
+	}
+	
+	public static int minus(int num, int num1) {
+		return num - num1;
+	}
+
+	public static int multi(int num, int num1) {
+		return num * num1;
+	}
+
+	public static double div(int num, int num1) {
+		return (double)num / num1;
+	}
+}
