@@ -1,0 +1,30 @@
+package test2;
+
+import java.util.Scanner;
+
+public class Ex07 {
+
+	public static void main(String[] args) {
+//		어떤 숫자를 입력받고,
+//		해당 숫자까지의 홀수와 합과 짝수의 합을 구하시오.
+		
+		Scanner sc  = new Scanner(System.in);
+		
+		int num = sc.nextInt();
+		
+		int num1 = 0;
+		int num2 = 0;
+		
+		for (int i=1; i<=num; i++) {
+			if(i%2==0) {
+				num1 += i;
+			}else {
+				num2 += i;
+			}
+		}
+		
+		System.out.println("홀수의 합: " + num1 + " 짝수의 합: " + num2);
+		
+		sc.close();
+	}
+}
