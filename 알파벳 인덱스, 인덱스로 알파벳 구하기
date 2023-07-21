@@ -1,0 +1,15 @@
+
+public class Ex05 {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		char letter = ' ';
+		
+		int index = letter - 'A';
+//		주어진 알파벳의 인덱스을 구하는 법
+		
+		int mostFrequentLetter = (char) (i + 'A');
+//		0 = A 1 = B가 되는것 처럼 위에서 구한 인덱스을 대입하면
+//		위의 조건과 같이 입력됨
+	}
+}
