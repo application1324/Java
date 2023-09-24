@@ -1,0 +1,27 @@
+package classExam;
+
+public class nullEx {
+	
+//	자바에서 null은 비어있음이다.
+//	단, null은 참조형 변수만 가질수 있는 값이다.
+
+	public static void main(String[] args) {
+//		Person p1 = null;
+//		System.out.println(p1);
+//		p1.getName();
+//		만약 null을 보관하고 있는 변수의 매소드을 호출하면
+//		nullPointerException 이라는 오류가 발생한다는 점을 주의해야 한다.
+		
+		Person[] peoples = new Person[5];
+		peoples[0] = new Person("홍길동", 52);
+		peoples[2] = new Person("장발장", 29);
+		peoples[3] = new Person("임꺽정", 66);
+		
+		for(int i=0; i<peoples.length; i++) {
+			Person p = peoples[i];
+			System.out.println((peoples[i] != null) ? p.getName() : "비어있음");
+//			출력하는 과정에 null있다면 nullPointerException 출력
+		}
+		
+	}
+}
