@@ -1,0 +1,25 @@
+package classExam;
+
+import java.util.ArrayList;
+
+public class BookArrayListTest {
+    public static void main(String[] args) {
+        
+        ArrayList<Book> library = new ArrayList<Book>();
+        
+        library.add(new Book("태백산맥", "조정래"));
+        library.add(new Book("데미안", "헤르만 해세"));
+        library.add(new Book("어린왕자", "생택쥐페리"));
+        
+        // ArrayList의 크기를 이용하여 반복문을 사용하여 각 Book 객체의 정보를 출력
+        for (int i = 0; i < library.size(); i++) {
+            Book book = library.get(i);
+            book.showBookInfo();
+        }
+        
+        // 향상된 for 루프를 사용하여도 같은 결과를 얻을 수 있습니다.
+        // for (Book book : library) {
+        //     book.showBookInfo();
+        // }
+    }
+}
