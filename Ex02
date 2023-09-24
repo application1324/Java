@@ -1,0 +1,14 @@
+package classExam;
+
+public class Ex02 {
+	public static void main(String[] args) {
+		boolean newBoolean = (7>5) && (9<2) && (10==10);
+		System.out.println(newBoolean);
+//		boolean chk = m1() && m2() && m3();
+//		m1 거짓 30% m2 거짓 50% m3 거짓 30% 거짓의 확률이 높다면 먼저 입력한다.
+		
+//		식의 결과값이 이미 결정된 경우 자바는 연산을 멈춘다.
+//		이와 같이 미리 멈추는 것을 '솟서킷연산'이라고 한다.
+	}
+	
+}
