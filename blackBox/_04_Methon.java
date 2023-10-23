@@ -6,9 +6,11 @@ public class _04_Methon {
         b1.modelName = "까망이";
 
         b1.autoReport();
+//        클래스 변수, 매서드 : 모든 클래스에서 사용하는 변수에 적용을 할수있음
         BlackBox.canAutoReport = true;
         b1.autoReport();
 
+//        인스턴스 변수, 매서드는 자신에게만 적용됨
         b1.insertMemoryCard(256);
 
         int fileCount = b1.getVideoFileCount(1);
