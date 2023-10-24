@@ -2,19 +2,53 @@ package blackBox;
 
 public class BlackBox {
 
+    // 클래스는 대문자, 매서드는 소문자 시작
+
     // 클래스의 구성요소 필드, 매소드, 생성자
 
+    // 생성자가 없는 경우에는 자바가 기본 생성자를 자동으로 생성 및 호출해 준다.
+    // 생성자을 만들었을때는 기본 생성자을 만들지 않음
+
+
+    // 생성자 오버로딩
+    BlackBox() {
+        System.out.println("기본 생성자 호출");
+        this.serialNumber = ++counter;
+        System.out.println("새로운 시리얼 번호을 입력받았습니다 "+serialNumber);
+    }
+    BlackBox(String modelName, String resolution, int price, String color) {
+        this(); // 기본 생성자 호출, 먼저 실행이 됨
+        // 사용자 지정 생성자가 실행되기 전에 기본생성자가 실행이됨
+//        값이 초기화되려하면 생성자가 먼저 실행이 됨
+//        ① 값이 초기화되려하면 생성자 실행
+//        ② 생성자 실행됨, 값 초기화됨
+        this.modelName = modelName;
+        this.resolution = resolution;
+        this.price = price;
+        this.color = color;
+        System.out.println("사용자 정의 생성자 호출");
+    }
+    BlackBox(String modelName, String resolution, int price) {
+        this();
+        this.modelName = modelName;
+        this.resolution = resolution;
+        this.price = price;
+    }
+//    실행될때 어떠한 행동을 무조건해야할때, 값을 초기화할때
+
+    // 인스턴스가 되어야지 사용가능, 공간이 주어지지 않음
     // 필드
     String modelName; // 모델명
     String resolution; // 해상도
     int price; // 가격
     String color; // 제품색상
-//    인스턴스가 되어야지 사용가능, 공간이 주어지지 않음
+    int serialNumber;
 
-//    클래스 변수,
+    //    static을 앞에 사용한다면 class변수가 됨, 미리 공간이 주어짐
+    //    여러 인스턴스에 같은 값을 넣어야 할때 사용함
+    //    클래스 변수
     static boolean canAutoReport = false; //자동신고기능
-//    static을 앞에 사용한다면 class변수가 됨, 미리 공간이 주어짐
-//    여러 인스턴스에 같은 값을 넣어야 할때 사용함
+    static int counter = 0; // 시리얼 번호를 생성해주는 역할 (처음에는 0이였다가 ++연산자를 통해서 값을 증가)
 
     // 매서드, 인스턴스 매소드
     void autoReport() {
@@ -64,5 +98,12 @@ public class BlackBox {
         canAutoReport = true;
 //        클래스에서는 인스턴스화 되지 않은 변수의 값을 바꿀수없다
 //        클래스 변수는 클래스에서 변경이 가능하다
+    }
+
+
+    public void appendModelName(String modelName) {
+        this.modelName += modelName;
+        // this 클래스 안에 있는 인스턴스 변수을 가르킬 수 있음
+        // 인스턴스와 파라미터을 나눔, this
     }
 }
