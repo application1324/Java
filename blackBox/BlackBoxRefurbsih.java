@@ -1,6 +1,6 @@
 package blackBox;
 
-public class BlackBox {
+public class BlackBoxRefurbsih {
 
     // 클래스는 대문자, 매서드는 소문자 시작
 
@@ -11,12 +11,12 @@ public class BlackBox {
 
 
     // 생성자 오버로딩
-    BlackBox() {
+    public BlackBoxRefurbsih() {
         System.out.println("기본 생성자 호출");
         this.serialNumber = ++counter;
         System.out.println("새로운 시리얼 번호을 입력받았습니다 "+serialNumber);
     }
-    BlackBox(String modelName, String resolution, int price, String color) {
+    BlackBoxRefurbsih(String modelName, String resolution, int price, String color) {
         this(); // 기본 생성자 호출, 먼저 실행이 됨
         // 사용자 지정 생성자가 실행되기 전에 기본생성자가 실행이됨
 //        값이 초기화되려하면 생성자가 먼저 실행이 됨
@@ -28,7 +28,7 @@ public class BlackBox {
         this.color = color;
         System.out.println("사용자 정의 생성자 호출");
     }
-    BlackBox(String modelName, String resolution, int price) {
+    BlackBoxRefurbsih(String modelName, String resolution, int price) {
         this();
         this.modelName = modelName;
         this.resolution = resolution;
@@ -38,20 +38,20 @@ public class BlackBox {
 
     // 인스턴스가 되어야지 사용가능, 공간이 주어지지 않음
     // 필드
-    String modelName; // 모델명
+    public String modelName; // 모델명
     String resolution; // 해상도
-    int price; // 가격
-    String color; // 제품색상
+    private int price; // 가격
+    protected String color; // 제품색상
     int serialNumber;
 
-//    modelName
+    //    modelName
     String getModelName() {
         return modelName;
     }
     void setModelName(String modelName) {
         this.modelName = modelName;
     }
-//    price
+    //    price
     int getPrice() {
         return price;
     }
@@ -62,14 +62,14 @@ public class BlackBox {
             this.price = price;
         }
     }
-//    color
+    //    color
     String getColor(){
         return color;
     }
     void  setColor(String color){
         this.color = color;
     }
-//    resolution
+    //    resolution
     String getResolution(){
         if (resolution == null || resolution.isEmpty()){
             return "판매자에게 문의하세요";
@@ -77,7 +77,7 @@ public class BlackBox {
             return resolution;
         }
     }
-//    .isEmpty() 값이 비어있는가?
+    //    .isEmpty() 값이 비어있는가?
 //    비어있음 true, 아님 false
     void setResolution(String resolution){
         this.resolution = resolution;
@@ -113,7 +113,7 @@ public class BlackBox {
         return 11;
     }
 
-//    showDateTime : 날짜정보 표시여부
+    //    showDateTime : 날짜정보 표시여부
 //    showSpeed : 속도정보 표시여부
 //    min : 영상 기록 단위(분)
     void record(boolean showDateTime, boolean showSpeed, int min) {
@@ -131,7 +131,7 @@ public class BlackBox {
         record(true,true,5);
     }
 
-//    고객센터 연결, 고객센터의 전화번호는 같기 때문에 class변수을 사용한다.
+    //    고객센터 연결, 고객센터의 전화번호는 같기 때문에 class변수을 사용한다.
     static void callServiceCenter(){
         System.out.println("서비스센터(1588-8888)으로 연결합니다");
 //        moderName = "분홍이";
