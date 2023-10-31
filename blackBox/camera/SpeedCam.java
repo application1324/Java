@@ -1,18 +1,9 @@
 package blackBox.camera;
 
-public class SpeedCam {
-    public String name;
+public class SpeedCam extends Camera{
 
     public SpeedCam() {
         this.name = "과속단속 카메라";
-    }
-
-    public void takePicture(){
-        // 사진 찰영
-    }
-
-    public void recordVideo(){
-        // 동영상 녹화
     }
 
     public void checkSpeed(){
@@ -23,4 +14,10 @@ public class SpeedCam {
         // 번호 인식
         System.out.println("차량번호을 인식합니다");
     }
+
+    @Override // annotation
+    public void  shoMainFeature() {
+        System.out.println(this.name+"의 주요 기능 : 속도 측정, 번호 인식");
+    }
 }
+
