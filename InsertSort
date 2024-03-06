@@ -1,0 +1,21 @@
+public class InsertSort {
+    public static void main(String[] args) {
+        int[] arr = new int[]{8, 3, 4, 9, 7};
+        
+        for(int i = 1; i < arr.length; ++i) {
+            for(int j = i; j > 0;  --j) {
+                if (arr[j-1] > arr[j]) {
+                    int tem = arr[j - 1];
+                    arr[j - 1] = arr[j];
+                    arr[j] = tem;
+                } else {
+                    break;
+                }
+            }
+        }
+
+        for (int j : arr) {
+            System.out.println(j);
+        }
+    }
+}
