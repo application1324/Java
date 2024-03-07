@@ -1,0 +1,50 @@
+import java.util.EmptyStackException;
+class Stack<T> {
+    class Node<T> {
+        private T data;
+        private Node<T> next;
+        public Node(T data) {
+            this.data = data;
+        }
+    }
+    private Node<T> top;
+    public T pop() {
+        if( top == null ) {
+            throw new  EmptyStackException();
+        }
+        T item = top.data; // 1
+        top = top.next; // top.next는 값을 할당받은 적이 없어 null을 할당한다.
+        return item; // 값을 return함
+    }
+
+    public void push(T item) {
+        Node<T> t = new Node<>(item); // 1, 2입력
+        t.next = top;
+        // t.next라는 값에 null이라는 값을 할당받음
+        // t.next에서 이전에 받은 1이라는 값을 next에 넣음, 2라는 값을 top에 넣음
+        top = t; // top은 item의 값은 받음
+    }
+
+    public T peek() {
+        if( top == null ) {
+            throw new  EmptyStackException();
+        }
+        return top.data; // top의 데이텅르 가져옴
+    }
+
+    public boolean isEmpty() {
+        return top == null;
+    } // top에 값이 없는지 비교함
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Stack<Integer> stack = new Stack<>();
+        stack.push(1);
+        System.out.println(stack.isEmpty());
+        System.out.println(stack.pop());
+        System.out.println(stack.isEmpty());
+        stack.push(1);
+        System.out.println(stack.peek());
+    }
+}
