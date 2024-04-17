@@ -1,18 +1,18 @@
 package oop.exam;
 
 public class Rectangle {
-    int x;
-    int y;
+    int width;
+    int height;
 
-    public int area(){
-        return x * y;
+    public int calculateArea(){
+        return width * height;
     }
 
-    public int round() {
-        return x * 2 + y * 2;
+    public int calculateRound() {
+        return width * 2 + height * 2;
     }
 
     public boolean isSquare() {
-        return x == y;
+        return width == height;
     }
 }

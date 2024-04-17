@@ -7,11 +7,11 @@ public class RectangleMain {
         Scanner sc = new Scanner(System.in);
 
         Rectangle rt = new Rectangle();
-        rt.x = sc.nextInt();
-        rt.y = sc.nextInt();
+        rt.width = sc.nextInt();
+        rt.height = sc.nextInt();
 
-        System.out.println(rt.area());
-        System.out.println(rt.round());
+        System.out.println(rt.calculateArea());
+        System.out.println(rt.calculateRound());
         System.out.println(rt.isSquare());
     }
 }
