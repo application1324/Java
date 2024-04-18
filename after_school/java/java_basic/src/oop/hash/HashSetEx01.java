@@ -25,7 +25,7 @@ public class HashSetEx01 {
         for(int i : arr) {
             int num = target - i;
             // 넣을 값에서 num있는지 확인
-            if(set.contains(num)) {
+            if(set.contains(num) && i != num) {
                 return true;
             }
             // 값 넣기
